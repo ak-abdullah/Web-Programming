@@ -1,0 +1,137 @@
+@media only screen and (max-width: 1240px) {
+    .flex {
+        margin-top: 88px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .pic {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .flex {
+        margin-top: 88px;
+    }
+}
+
+
+@media only screen and (max-width: 990px) {
+    .pic {
+        height: 500px;
+    }
+    
+    .flex {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .navbar {
+        font-size: 12px;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .navbar label#name {
+        display: none;
+    }
+
+    #companylogo {
+        line-height: 2;
+    }
+}
+
+
+@media only screen and (max-width: 870px) {
+    .pic {
+        height: 550px;        
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .flex {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .navbar {
+        font-size: 10px;
+    }
+    
+    #companylogo {
+        display: none;
+    }
+    
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+    }
+
+    .navbar li.options {
+        position: static;
+        margin: 20px 34px;
+        /* float: none; */
+    }
+}
+
+@media only screen and (max-width: 755px) {
+    .pic {
+        height: 600px;        
+    }
+
+    .flex {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .pic {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    main {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .pic {
+        padding: 20px 0;
+        width: 70%;
+    }
+
+    #box3 {
+        order: 4;
+    }
+
+    #box2 {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .pic {
+        height: 800px;        
+    }
+
+    #box2 {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .pic {
+        width: 90%;
+    }
+}
