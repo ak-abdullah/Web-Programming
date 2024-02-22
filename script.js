@@ -24,9 +24,15 @@ function check(params) {
             }
         }
 
+    
         if (str2.length < 8 && !hasError) {
             errorMessage = "Password cannot be less than 8 characters";
             hasError = true;
+        }
+        regex = /[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/;
+        if (!regex.test(str2) && !hasError) {
+            errorMessage = "Password must contain special characters";
+            hasError = true
         }
 
         regex = /[^a-zA-Z0-9]/;
@@ -61,6 +67,7 @@ function check(params) {
             errorMessage = "Phone Number length is less than 11";
             hasError = true;
         }
+
 
         if (str7 == "" && !hasError) {
             errorMessage = "Invalid Birth Date";
