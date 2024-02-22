@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             background-color: rgb(31, 29, 29);
         }
@@ -18,9 +19,18 @@
             display: flex;
             flex-direction: row;
             justify-content: right;
-            align-content: center;
+            align-items: center;
+            margin-right: 30px;
         }
 
+        .navbar div button {
+            border: 1px solid white;
+            background-color: rgb(31, 29, 29);
+            color: white;
+            border-radius: 3px;
+            height: 40px;
+            width: 9%;
+        }
         .navbar div a {
             margin: 40px;
             color: white;
@@ -42,6 +52,43 @@
             color: white;
             font-weight: bold;
         }
+
+        .container input {
+            width: 40%;
+            height: 50px;
+            padding: 20px;
+        }
+
+        .container button {
+            background-color: green;
+            border: none;
+            width: 5%;
+            height: 50px;
+            position: absolute;
+            right: 700px;
+        }
+
+        .container button:hover {
+            background-color: rgb(1, 97, 1);
+            transition: 0.3s;
+        }
+
+        .container img {
+            object-fit: cover;    
+            float: right;
+            position: relative;
+            bottom: 200px;
+            
+            border-radius: 20px;
+        }
+
+        .img {
+            display: inline-block;
+        }
+
+        .column h1 {
+            max-width: 500px;
+        }
     </style>
 </head>
 
@@ -62,8 +109,11 @@
         <div class="column">
             <h1>Fiverr website clone with html, css, javascript</h1>
         </div>
-        <input type="text" id="search-input" placeholder="Search...">
-        <button type="submit" id="search-button">Search</button>
+        <input type="text" id="search-input" placeholder="Search for any service ......">
+        <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+        <div class="container img">
+            <img src="dog.png" alt="Girl in a jacket" width="500" height="600">
+        </div>
     </div>
 </body>
 
