@@ -81,6 +81,8 @@ function check(params) {
     if (hasError) {
         document.getElementById('error').innerHTML = errorMessage;
     } else {
-        document.getElementById('error').innerHTML = "Login Successful";
+        window.location.href = "http://127.0.0.1:5500/signin.html"
+        alert("Sucessfully Registered")
+        document.getElementById('error').innerHTML = "Sucessfully Registered";
     }
 }
