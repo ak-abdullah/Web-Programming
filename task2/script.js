@@ -49,7 +49,7 @@ function check(params) {
             hasError = true;
         }
 
-        regex = /[^1-9]/
+        regex = /[^0-9]/
         if (regex.test(str5) && !hasError) {
             errorMessage = "Invalid Zip Code";
             hasError = true;
@@ -88,7 +88,7 @@ function check(params) {
     if (hasError) {
         document.getElementById('error').innerHTML = errorMessage;
     } else {
-        window.location.href = "http://127.0.0.1:5500/signin.html"
+        window.location.href = "signup.html"
         alert("Sucessfully Registered")
         document.getElementById('error').innerHTML = "Sucessfully Registered";
     }
