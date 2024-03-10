@@ -10,6 +10,7 @@ $(document).ready(function() {
         {
             $('.container').css('display', 'block');
         }
+
         let weather_description = result.weather[0].description
         let temp = result.main.temp
         let humidity = result.main.humidity
@@ -26,18 +27,28 @@ $(document).ready(function() {
         
         $('#image').attr('src', icon)
     })
-    const apiUrl2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=metric&cnt=5"
+    const apiUrl2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=metric"
+    let date = ""
+    let count = 0
     $.getJSON(apiUrl2, function(result) {
         result.list.forEach((day_data, index) => {
-            let date = day_data.dt
             let city = result.city.name
             let weather_description = day_data.weather[0].description
             let temp = day_data.main.temp
             let humidity = day_data.main.humidity
             let country = result.city.country
             let feels_like = day_data.main.feels_like
+            
             let icon = "https://openweathermap.org/img/wn/" + day_data.weather[0].icon + "@2x.png" 
-            $('#day-' + index).html('Day ' + (parseInt(index) + 1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "<img src=" + icon + ">" + temp)
+            check_date = day_data.dt_txt.slice(0, 10)
+            if (check_date != date) {
+                id = "day-" + count
+                count = count + 1
+                $("#" + id).html(day_data.dt_txt.slice(0, 10) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "<img src=" + icon + ">" + temp + "° C")
+                date = check_date
+            }
+            if (count >= 5)
+                return false
         });
 
     });
