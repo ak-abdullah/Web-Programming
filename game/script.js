@@ -4,7 +4,8 @@ $(function() {
     const cpuResult = $('.cpu_result img')
     const result = $('.result')
     const optionImages = $('.option_image')
-
+    let cpu_count = 0
+    let user_count = 0
     optionImages.each((index, image) => {
     $(image).on('click', function(e) {
         $(image).addClass('active')
@@ -44,6 +45,13 @@ $(function() {
       let outComeValue = outcomes[userValue + cpuValue]
       console.log(userValue + cpuValue)
       result.text(userValue === cpuValue ? "Math Draw" : `${outComeValue}`);
+      if (outComeValue == "You Win!!" )
+        user_count++
+    else if (outComeValue == "You Lose!!")
+        cpu_count++
+    
+    $('#u').html(': ' + user_count)
+    $('#c').html(': ' + cpu_count)
       }, 2500)
     })
   })

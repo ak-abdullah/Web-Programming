@@ -20,6 +20,8 @@
             align-items: center;
             justify-content: center;
             background-color: white;
+            flex-direction: column;
+            row-gap: 10px;
         }
 
         .container {
@@ -113,9 +115,22 @@
             margin-top: 1rem;
         }
 
+        .score {
+            /* border: 2px solid red; */
+            display: flex;
+            column-gap: 380px;
+            color: rgb(224, 156, 73);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
+    <div class="score">
+        <p>User <span id="u">: 0</span></p>
+        <p>CPU <span id="c">: 0</span></p>
+    </div>
     <section class="container">
         <div class="result_field">
             <div class="result_images">
