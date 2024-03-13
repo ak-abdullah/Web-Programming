@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <title>Rock, Papper Scissors Game</title>
     <style>
         * {
@@ -24,6 +27,26 @@
             border-radius: 14px;
             background-color: whitesmoke;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.313);
+        }
+
+        .container.start .user_result{
+            animation: userShake 0.7s ease infinite;
+        }
+
+        .container.start .cpu_result{
+            animation: cpuShake 0.7s ease infinite;
+        }
+
+        @keyframes userShake {
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        @keyframes cpuShake {
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .result_images{
@@ -64,6 +87,13 @@
             opacity: 1;
         }
 
+        .option_image.active {
+            opacity: 1;
+        }
+
+        .container.start .option_images {
+            pointer-events: none;
+        }
         .option_image {
             display: flex;
             flex-direction: column;
