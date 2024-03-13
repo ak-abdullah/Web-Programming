@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Papper Scissors Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+
+        .container {
+            padding: 2rem 7rem;
+            border-radius: 14px;
+            background-color: whitesmoke;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.313);
+        }
+
+        .result_images{
+            display: flex;
+            column-gap: 7rem;
+        }
+
+        .result_images img {
+            width: 100px;
+        }
+
+        .user_result img {
+            transform: rotate(90deg);
+        }
+
+        .cpu_result img {
+            transform: rotate(-90deg) rotateY(180deg);
+        }
+
+        .result {
+            text-align: center;
+            font-size: 2rem;
+            color: purple;
+        }
+
+        .option_image img {
+            width: 50px;
+        }
+
+        .option_images {
+            display: flex;
+            align-items: center;
+            margin-top: 2.5rem;
+            justify-content: space-around;
+        }
+
+        .option_image:hover {
+            opacity: 1;
+        }
+
+        .option_image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .option_image img {
+            pointer-events: none;
+        }
+
+        .option_image p {
+            color: purple;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="result_field">
+            <div class="result_images">
+                <span class="user_result">
+                    <img src="rock.png" alt="">
+                </span>
+                <span class="cpu_result">
+                    <img src="rock.png" alt="">
+                </span>
+            </div>
+            <div class="result">Let's Play!!</div>
+        </div>
+        <div class="option_images">
+            <span class="option_image">
+                <img src="rock.png" alt="">
+                <p>Rock</p>
+            </span>
+            <span class="option_image">
+                <img src="scissors.png" alt="">
+                <p>Scissors</p>
+            </span>
+            <span class="option_image">
+                <img src="paper.png" alt="">
+                <p>Paper</p>
+            </span>
+        </div>
+    </section>
+</body>
+</html>
