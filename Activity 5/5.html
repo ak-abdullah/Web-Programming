@@ -13,9 +13,7 @@
                 var info = $(event.target)
                 var id = info.attr('id')
                 var cl = info.attr('class')
-                alert(id)
-                alert(cl)
-
+                $('.container.mt-5.bg-dark.text-white').text("Id: " + id + ",   Class: " + cl)
             })
         })
     </script>
@@ -30,6 +28,9 @@
     </div>
     <div id="click2" class="container bg-primary text-light mt-5">
         Click Me!
+    </div>
+    <div class="container mt-5 bg-dark text-white">
+
     </div>
 </body>
 
