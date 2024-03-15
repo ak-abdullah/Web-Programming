@@ -80,7 +80,7 @@
 
         footer {
             padding-top: 10px;
-            height: 12vh;
+            height: 75px;
             margin-top: 100px;
         }
 
@@ -103,6 +103,10 @@
             .container-fluid .rounded {
                 display: none;
             }
+
+            .navbar-nav a {
+                padding: 15px  30px !important;
+            } 
 
             .row.justify-content-center.py-5 {
                 flex-direction: column !important;
@@ -169,6 +173,7 @@
 
             .hamburger {
                 display: flex !important;
+                height: 72px;
             }
 
             .navbar-nav {
@@ -187,6 +192,7 @@
         .shown {
             display: flex !important;
         }
+        
 
         @media screen and (max-width: 380px) {
             #buttons_center {
@@ -199,29 +205,33 @@
                 padding: 7px;
             }
         }
+
+        .justify-content-center.py-5 {
+            margin: 10px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid bg-dark">
-        <img src="profile.jpg" alt="Cinque Terre" class="profile_img mt-2">
+        <img src="profile.jpg" alt="Cinque Terre" class="profile_img" style="margin: 11px 0;">
         <div class="hamburger d-flex justify-content-end d-none">
-            <i class="fa fa-bars mt-2 me-3" style="font-size: 30px; cursor: pointer; border: none;"></i>
+            <i class="fa fa-bars me-3" style="font-size: 30px; cursor: pointer; border: none; margin: 20px 0;"></i>
         </div>
         <nav class="navbar navbar-expand-sm bg-dark ">
             <div class="container-fluid justify-content-center">
                 <ul class="navbar-nav fw-bold text-center">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link p-3">Home</a>
+                        <a href="#home" class="nav-link" style="padding: 15px 100px ">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#qualify" class="nav-link p-3">Qualification</a>
+                        <a href="#qualify" class="nav-link" style="padding: 15px 100px">Qualification</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Services" class="nav-link p-3">Services</a>
+                        <a href="#Services" class="nav-link" style="padding: 15px 100px">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Contact" class="nav-link p-3">Contact</a>
+                        <a href="#Contact" class="nav-link" style="padding: 15px 100px">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -265,10 +275,9 @@
             </div>
         </div>
     </div>
-    <div id="Services"></div>
     <div class="container text-center pt-5 mt-5">
         <h1>Sevices Offered</h1>
-        <div class="row pt-5 justify-content-center">
+        <div class="row pt-5 justify-content-center" id="Services">
             <div class="col-lg col-md-6 mt-5">
                 <div class="card">
                     <img src="Web.png" alt="">
@@ -302,7 +311,8 @@
         </div>
     </div>
     <div id="qualify"></div>
-    <div style="margin-top: 150px;" class="container">
+    <h1 style="text-align: center; margin: 70px 0;">Education and Experience</h1>
+    <div style="margin-top: 50px;" class="container">
         <ul class="timeline">
             <li>
                 <div class="timeline-time">2010</div>
