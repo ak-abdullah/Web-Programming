@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
     <title>Abdullah Khalid</title>
     <style>
+        @media screen and (max-width: 1202px) {
+            .card {
+                width: 100% !important;
+            }
+        }
 
         * {
             margin: 0;
@@ -17,11 +23,18 @@
             box-sizing: border-box;
         }
 
-        
+
         body {
             font-family: 'Dancing Script', cursive;
             color: gray;
             background-color: whitesmoke;
+        }
+
+        .profile_img {
+            float: left;
+            width: 50px;
+            height: 50px !important;
+            border-radius: 50%;
         }
 
         p {
@@ -48,7 +61,7 @@
 
         .card {
             border-radius: 10px;
-            height: 400px;
+            height: 500px;
         }
 
         .card img {
@@ -70,7 +83,8 @@
             height: 12vh;
             margin-top: 100px;
         }
-        footer p{
+
+        footer p {
             color: white;
             font-family: 'Times New Roman', Times, serif;
             font-size: 17px;
@@ -84,54 +98,167 @@
         a {
             text-decoration: none;
         }
+
+        @media screen and (max-width: 1158px) {
+            .container-fluid .rounded {
+                display: none;
+            }
+
+            .row.justify-content-center.py-5 {
+                flex-direction: column !important;
+                /* align-items: center; */
+                align-content: center;
+            }
+
+            .container-fluid .col-8 {
+                width: 90%;
+            }
+        }
+
+
+        @media screen and (max-width: 994px) {
+            form .container div.contact-details p {
+                display: none !important;
+            }
+
+            .col-lg-6.col-auto.col-md-12,
+            #buttons_center {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+
+            .container-fluid #hide {
+                display: none;
+            }
+
+            form .container div.contact-details {
+                margin: auto;
+                display: inline-block;
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            form .container h2.mb-5.ms-3 {
+                margin: 0 !important;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .col-lg-6.col-md-12 {
+                margin-top: 50px;
+            }
+
+            .col-lg-4.col-md-12.mt-3 {
+                text-align: center;
+            }
+        }
+
+
+        @media screen and (max-width: 580px) {
+
+            .timeline-time,
+            .timeline-icon,
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-body {
+                margin: auto !important;
+            }
+
+            .hamburger {
+                display: flex !important;
+            }
+
+            .navbar-nav {
+                flex-direction: column !important;
+            }
+
+            .navbar {
+                display: none !important;
+            }
+        }
+
+        .hamburger i {
+            height: 40px;
+        }
+
+        .shown {
+            display: flex !important;
+        }
+
+        @media screen and (max-width: 380px) {
+            #buttons_center {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+            }
+
+            div form i {
+                padding: 7px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark sticky-top">
-        <div class="container-fluid justify-content-center">
-            <ul class="navbar-nav fw-bold">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link px-5">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#qualify" class="nav-link px-5">Qualification</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Services" class="nav-link px-5">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Contact" class="nav-link px-5">Contact</a>
-                </li>
-            </ul>
+    <div class="container-fluid bg-dark">
+        <img src="profile.jpg" alt="Cinque Terre" class="profile_img mt-2">
+        <div class="hamburger d-flex justify-content-end d-none">
+            <i class="fa fa-bars mt-2 me-3" style="font-size: 30px; cursor: pointer; border: none;"></i>
         </div>
-    </nav>
+        <nav class="navbar navbar-expand-sm bg-dark ">
+            <div class="container-fluid justify-content-center">
+                <ul class="navbar-nav fw-bold text-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link p-3">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#qualify" class="nav-link p-3">Qualification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Services" class="nav-link p-3">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Contact" class="nav-link p-3">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="container-fluid" id="home">
         <div class="row justify-content-center py-5">
             <div class="col-3 mx-4 mt-5">
                 <img src="profile.jpg" alt="Cinque Terre" class="rounded">
             </div>
             <div class="col-8">
-                <h1 class="fw-bold p-5"><span class="text-dark">Welcome to Abdullah's Portfolio!</span></h1>
+                <h1 style="text-align: center;" class="fw-bold p-5"><span class="text-dark">Welcome to Abdullah's
+                        Portfolio!</span></h1>
                 <p class="text-justify">Hello, I'm Abdullah, a passionate and dedicated computer science enthusiast with
                     a keen interest in
                     exploring the limitless possibilities of technology. I have a solid foundation in computer science
                     principles and a commitment to continuous learning and innovation.</p>
                 <div class="row">
-                    <div class="col-4 mt-3">
+                    <div class="col-lg-4 col-md-12 mt-3">
                         <a href=""><i class="fa fa-facebook me-4" style="font-size: 30px; color: black;"></i></a>
                         <a href=""><i class="fa fa-instagram me-4" style="font-size: 30px; color: black;"></i></a>
                         <a href=""><i class="fa fa-twitter me-4" style="font-size: 30px; color: black;"></i></a>
-                        <a href="https://github.com/ak-abdullah" target="_blank"><i class="fa fa-github" style="font-size: 30px; color: black;"></i></a>
+                        <a href="https://github.com/ak-abdullah" target="_blank"><i class="fa fa-github"
+                                style="font-size: 30px; color: black;"></i></a>
                     </div>
                     <div class="col mt-3">
-                        <p style="color: black; font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;;">Let's
+                        <p id="hide"
+                            style="color: black; font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;;">Let's
                             turn our virtual connection into something real!</p>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <button type="button" class="btn btn-dark me-5 mt-2"><a style="text-decoration: none; color: white;" href="#" Download="CV.pdf">Download CV</a></button>
-                            <a href="#Contact"><button type="button" class="btn btn-light mt-2">Contact Me</button></a>
+                        <div id="buttons_center" class="col">
+                            <button type="button" class="btn btn-dark me-5 mt-2" id="hi"><a
+                                    style="text-decoration: none; color: white;" href="#" Download="CV.pdf">Download
+                                    CV</a></button>
+                            <button type="button" class="btn btn-light me-5 mt-2"><a href="#Contact"
+                                    style="text-decoration: none; color: black;">Contact Me</a></button>
                         </div>
                     </div>
                 </div>
@@ -141,8 +268,8 @@
     <div id="Services"></div>
     <div class="container text-center pt-5 mt-5">
         <h1>Sevices Offered</h1>
-        <div class="row pt-5">
-            <div class="col-md">
+        <div class="row pt-5 justify-content-center">
+            <div class="col-lg col-md-6 mt-5">
                 <div class="card">
                     <img src="Web.png" alt="">
                     <div class="card-body">
@@ -152,7 +279,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-lg col-md-6 mt-5">
                 <div class="card">
                     <img src="developer.png" alt="">
                     <div class="card-body">
@@ -162,7 +289,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-lg col-md-6 mt-5">
                 <div class="card">
                     <img src="artificial.jpg" alt="">
                     <div class="card-body">
@@ -208,16 +335,25 @@
     <div id="contact-form" class="container">
         <form action="/action_page.php">
             <div class="container">
-                <div class="row">
-                    <div class="col">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-auto col-md-12">
                         <h2 class="mb-5 ms-3">Contact Me</h2>
-                        <div><a style="color: gray;" href=""><i class="fa fa-envelope" style="font-size: 30px;"></i>abdullah@gmail.com</div></a>
-                        <div><a style="color: gray;" href=""><i class="fa fa-phone" style="font-size: 30px;"></i>02174534782</div></a>
-                        <div><a style="color: gray;" href=""><i class="fa fa-linkedin" style="font-size: 30px;"></i>Abdullah Khalid</div></a>
+                        <div class="contact-details"><a style="color: gray;" href=""><i class="fa fa-envelope"
+                                    class="contact-details" style="font-size: 30px;"></i>
+                                <p style="display: inline;">abdullah@gmail.com</p>
+                        </div></a>
+                        <div class="contact-details"><a style="color: gray;" href=""><i class="fa fa-phone"
+                                    class="contact-details" style="font-size: 30px;"></i>
+                                <p style="display: inline;">02174534782</p>
+                        </div></a>
+                        <div class="contact-details"><a style="color: gray;" href=""><i class="fa fa-linkedin"
+                                    style="font-size: 30px;"></i>
+                                <p style="display: inline;">Abdullah Khalid</p>
+                        </div></a>
 
-                    </div> 
-                    <div class="col">
-                            <h2>Interested to work together? Let's talk</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <h2>Interested to work together? Let's talk</h2>
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control" id="fname" placeholder="First Name" name="name">
@@ -250,10 +386,13 @@
             </div>
         </form>
     </div>
-        <footer class="bg-dark"><p class="text-center">Copyright &#169; Abdullah. All rights reserved</p><p class="text-center">Designed by Abdullah Sheikh</p></footer>
-        <script>
-            
-        </script>
+    <footer class="bg-dark">
+        <p class="text-center">Copyright &#169; Abdullah. All rights reserved</p>
+        <p class="text-center">Designed by Abdullah Sheikh</p>
+    </footer>
+    <script>
+
+    </script>
 </body>
 
 </html>
